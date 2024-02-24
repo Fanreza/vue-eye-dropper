@@ -19,7 +19,6 @@ import { createApp } from 'vue';
 import App from './App.vue';
 
 import  { EyeDropper }  from  'vue-eye-dropper'
-import  'vue-eye-dropper/dist/style.css'
 
 const app = createApp(App);
 app.component('EyeDropper', EyeDropper);
@@ -30,7 +29,6 @@ app.component('EyeDropper', EyeDropper);
 ```vue
 <script>
 import  { EyeDropper }  from  'vue-eye-dropper'
-import  'vue-eye-dropper/dist/style.css'
 </script>
 
 <template>
