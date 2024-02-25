@@ -1,5 +1,5 @@
-
 ## vue-eye-dropper
+
 Vue wrapper for EyeDropper instance
 
 [Demo](https://stackblitz.com/edit/vuepic-vue-datepicker?file=src%2Fcomponents%2FPlayground.vue)
@@ -15,24 +15,28 @@ Import and register component
 **Global**
 
 ```js
-import { createApp } from 'vue';
-import App from './App.vue';
+import { createApp } from 'vue'
+import App from './App.vue'
 
-import  { EyeDropper }  from  'vue-eye-dropper'
+import { EyeDropper } from 'vue-eye-dropper'
 
-const app = createApp(App);
-app.component('EyeDropper', EyeDropper);
+const app = createApp(App)
+app.component('EyeDropper', EyeDropper)
 ```
 
 **Local**
 
 ```vue
-<script>
-import  { EyeDropper }  from  'vue-eye-dropper'
+<script setup lang="ts">
+import { EyeDropper } from 'vue-eye-dropper'
+
+const handleColorPicked = (color: string) => {
+  console.log('Color picked:', color)
+}
 </script>
 
 <template>
-    <EyeDropper />
+  <EyeDropper default-color="#fff" :height="25" :width="25" @colorPicked="handleColorPicked" />
 </template>
 ```
 
@@ -40,9 +44,22 @@ import  { EyeDropper }  from  'vue-eye-dropper'
 
 [caniuse](https://caniuse.com/?search=eyedropper)
 
-
 | Browser | Version |
-|--|--|
-| Chrome | 95-125 |
-| Edge | 121 |
-| Opera | 81-106 |
+| ------- | ------- |
+| Chrome  | 95-125  |
+| Edge    | 121     |
+| Opera   | 81-106  |
+
+## Props
+
+| Name         | Value          | Default |
+| ------------ | -------------- | ------- |
+| defaultColor | srgbHex String | #fff    |
+| width        | number         | 25      |
+| height       | number         | 25      |
+
+## Events
+
+| Name        | Value          |
+| ----------- | -------------- |
+| colorPicked | srgbHex String |
