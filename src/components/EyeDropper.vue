@@ -13,6 +13,10 @@ const props = withDefaults(defineProps<Props>(), {
   height: 25
 })
 
+const emit = defineEmits<{
+  colorPicked: [string]
+}>()
+
 const colorPick = ref<string>('')
 const colorValue = computed(() => colorPick.value || props.defaultColor || '#fff')
 
@@ -26,6 +30,7 @@ const pickDrop = () => {
 
   eyedropper.open().then((result: ResultDropper) => {
     colorPick.value = result?.sRGBHex
+    emit('colorPicked', result?.sRGBHex)
   })
 }
 </script>
