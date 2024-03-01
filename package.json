@@ -1,6 +1,8 @@
 {
   "name": "vue-eye-dropper",
-  "version": "0.0.10",
+  "version": "0.0.11",
+  "description": "Vue 3 Eye Dropper",
+  "author": "Fanreza",
   "private": false,
   "type": "module",
   "files": [
@@ -16,9 +18,13 @@
   },
   "types": "./dist/index.d.ts",
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Fanreza/vue-eye-dropper.git"
+    "url": "https://github.com/Fanreza/vue-eye-dropper.git",
+    "type": "git"
   },
+  "bugs": {
+    "url": "https://github.com/Fanreza/vue-eye-dropper/issues"
+  },
+  "homepage": "https://github.com/Fanreza/vue-eye-dropper",
   "keywords": [
     "eyedropper",
     "vue3",
@@ -35,6 +41,9 @@
     "test": "exit 0"
   },
   "dependencies": {
+    "markmap-common": "^0.16.0",
+    "markmap-lib": "^0.16.0",
+    "markmap-view": "^0.16.0",
     "vue": "^3.4.15"
   },
   "devDependencies": {
