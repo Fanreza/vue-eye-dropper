@@ -2,8 +2,6 @@
 
 Vue wrapper for EyeDropper instance
 
-[Demo](https://stackblitz.com/edit/vuepic-vue-datepicker?file=src%2Fcomponents%2FPlayground.vue)
-
 ## Install
 
 ```shell
